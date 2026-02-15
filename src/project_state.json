@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Transparent brand logo centered with even padding (ccpg-logo-transparent.dim_512x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-add-the-user-uploaded-brand-logo-from-ccpg-logo-transparent-bg-png-as-a-static-image-asset-under-frontend-public-assets-generated-and-use-it-as-the-primary-hero-logo-in-place-of-the-current-convert-cpg-wordmark-image",
+      "title": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Replace the conver.cpg image with the user's attached brand logo image",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Replace convert.cpg wordmark image with uploaded brand logo",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

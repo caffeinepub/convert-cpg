@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no implemented logic.",
+  "feature_evidence.json": "Feature evidence report describing a logo replacement update affecting HeroSection.tsx.",
+  "frontend-file-summaries.txt": "Text file containing short summaries of several frontend components updated for branding and wording changes.",
+  "frontend/index.css": "Tailwind config and CSS variables defining theming for light and dark modes.",
+  "frontend/index.html": "Base HTML shell providing metadata and loading the React app entrypoint.",
+  "frontend/src/App.tsx": "Main app component rendering the LandingPage.",
+  "frontend/src/components/landing/LandingPage.tsx": "Landing page composition combining all main marketing sections.",
+  "frontend/src/components/landing/sections/CalendlySection.tsx": "Section with a Calendly CTA and supporting text linking to consultation scheduling.",
+  "frontend/src/components/landing/sections/CaseStudiesSection.tsx": "Displays three case studies with metrics and improvements achieved.",
+  "frontend/src/components/landing/sections/Footer.tsx": "Footer showing copyright info and a link to caffeine.ai.",
+  "frontend/src/components/landing/sections/HeroSection.tsx": "Hero banner with brand logo, headline, credentials, and CTA scroll button.",
+  "frontend/src/components/landing/sections/OfferSection.tsx": "Offer section highlighting service value, focus areas, and CTA to book an audit.",
+  "frontend/src/components/landing/sections/ProcessSection.tsx": "Four‑step process section explaining the engagement workflow.",
+  "frontend/src/config/marketing.ts": "Exports marketing constants including Calendly URL and company info.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches a backend actor based on the current Internet Identity, invalidating related queries on identity change.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides React context and utilities for managing Internet Identity login, stored identities, and authentication state.",
+  "frontend/src/index.css": "Defines Tailwind base layers and design tokens for light/dark themes and custom utilities using OKLCH color variables.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and Internet Identity providers.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, themes, plugins, and design tokens sourced from CSS variables.",
+  "project_state.json": "Tracks project state, features, and pending requests related to replacing the app's wordmark with a user-provided logo."
+}

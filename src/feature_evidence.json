@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-the-user-uploaded-brand-logo-from-ccpg-logo-transparent-bg-png-as-a-static-image-asset-under-frontend-public-assets-generated-and-use-it-as-the-primary-hero-logo-in-place-of-the-current-convert-cpg-wordmark-image",
+      "featureTitle": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+      "files": [
+        "frontend/src/components/landing/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

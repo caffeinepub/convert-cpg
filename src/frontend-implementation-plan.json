@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace hero wordmark with uploaded CCPG brand logo",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add the provided CCPG transparent logo as a generated static asset and render it as the primary hero logo instead of the existing convert.cpg wordmark.",
+      "acceptanceCriteria": [
+        "A new logo image file exists under frontend/public/assets/generated with a stable filename.",
+        "HeroSection renders the uploaded brand logo instead of \"/assets/generated/convert-cpg-wordmark.dim_512x128.png\".",
+        "The hero logo displays correctly on light and dark backgrounds (transparent background preserved).",
+        "No backend changes are required."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/ccpg-logo-transparent.dim_512x128.png",
+          "operation": "create",
+          "description": "Add the generated transparent brand logo asset per imageRequirements (\"Transparent brand logo centered with even padding\"). Ensure the PNG preserves transparency for correct rendering on both light and dark backgrounds."
+        },
+        {
+          "path": "frontend/src/components/landing/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Replace the current hero logo image source \"/assets/generated/convert-cpg-wordmark.dim_512x128.png\" with \"/assets/generated/ccpg-logo-transparent.dim_512x128.png\" and update alt text to match the brand (preserving existing single-page layout and avoiding changes to other sections/flows)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Light mode - Clean, professional palette */
+        --background: 1 0 0;
+        --foreground: 0.15 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.15 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0 0;
+        
+        /* Primary: Deep charcoal for authority */
+        --primary: 0.2 0 0;
+        --primary-foreground: 0.99 0 0;
+        
+        /* Secondary: Soft neutral */
+        --secondary: 0.96 0 0;
+        --secondary-foreground: 0.2 0 0;
+        
+        /* Muted: Light gray */
+        --muted: 0.96 0 0;
+        --muted-foreground: 0.5 0 0;
+        
+        /* Accent: Subtle highlight */
+        --accent: 0.97 0 0;
+        --accent-foreground: 0.2 0 0;
+        
+        /* Success: Emerald green for growth/conversion */
+        --success: 0.65 0.18 155;
+        --success-foreground: 0.99 0 0;
+        
+        /* Warning: Warm amber for urgency */
+        --warning: 0.75 0.15 65;
+        --warning-foreground: 0.15 0 0;
+        
+        /* Destructive: Red for errors */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0 0;
+        
+        /* Borders and inputs */
+        --border: 0.9 0 0;
+        --input: 0.9 0 0;
+        --ring: 0.65 0.18 155;
+        
+        /* Charts */
+        --chart-1: 0.65 0.18 155;
+        --chart-2: 0.75 0.15 65;
+        --chart-3: 0.55 0.22 25;
+        --chart-4: 0.6 0.15 240;
+        --chart-5: 0.7 0.12 300;
+    }
+
+    .dark {
+        /* Dark mode - High contrast, professional */
+        --background: 0.12 0 0;
+        --foreground: 0.98 0 0;
+        --card: 0.16 0 0;
+        --card-foreground: 0.98 0 0;
+        --popover: 0.16 0 0;
+        --popover-foreground: 0.98 0 0;
+        
+        /* Primary: Bright for dark mode */
+        --primary: 0.95 0 0;
+        --primary-foreground: 0.15 0 0;
+        
+        /* Secondary: Dark gray */
+        --secondary: 0.22 0 0;
+        --secondary-foreground: 0.98 0 0;
+        
+        /* Muted: Medium gray */
+        --muted: 0.25 0 0;
+        --muted-foreground: 0.65 0 0;
+        
+        /* Accent: Slightly lighter */
+        --accent: 0.28 0 0;
+        --accent-foreground: 0.98 0 0;
+        
+        /* Success: Brighter emerald for dark mode */
+        --success: 0.72 0.18 155;
+        --success-foreground: 0.12 0 0;
+        
+        /* Warning: Brighter amber */
+        --warning: 0.78 0.15 65;
+        --warning-foreground: 0.12 0 0;
+        
+        /* Destructive */
+        --destructive: 0.65 0.22 25;
+        --destructive-foreground: 0.12 0 0;
+        
+        /* Borders and inputs */
+        --border: 0.3 0 0;
+        --input: 0.3 0 0;
+        --ring: 0.72 0.18 155;
+        
+        /* Charts */
+        --chart-1: 0.72 0.18 155;
+        --chart-2: 0.78 0.15 65;
+        --chart-3: 0.65 0.22 25;
+        --chart-4: 0.65 0.15 240;
+        --chart-5: 0.75 0.12 300;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground antialiased;
+    }
+    
+    /* Focus states for accessibility */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    }
+    
+    /* Smooth scrolling for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Custom utility classes */
+@layer utilities {
+    .text-success {
+        color: oklch(var(--success));
+    }
+    
+    .bg-success {
+        background-color: oklch(var(--success));
+    }
+    
+    .border-success {
+        border-color: oklch(var(--success));
+    }
+    
+    .text-warning {
+        color: oklch(var(--warning));
+    }
+    
+    .bg-warning {
+        background-color: oklch(var(--warning));
+    }
+}

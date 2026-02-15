@@ -1,0 +1,50 @@
+{
+  "kind": "build_request",
+  "title": "Replace convert.cpg wordmark image with uploaded brand logo",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Please change the conver.cpg image to my brand logo image that I attached."
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new logo image file exists under frontend/public/assets/generated with a stable filename.",
+        "HeroSection renders the uploaded brand logo instead of \"/assets/generated/convert-cpg-wordmark.dim_512x128.png\".",
+        "The hero logo displays correctly on light and dark backgrounds (transparent background preserved).",
+        "No backend changes are required."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any files under frontend/src/components/ui or any frontend immutablePaths listed in SYSTEM_CONTEXT.",
+    "Keep all changes within the existing single-page landing page; do not introduce new sections or flows."
+  ],
+  "nonGoals": [
+    "Creating or modifying backend canister logic.",
+    "Changing carousel timing or other unrelated landing page content."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Transparent brand logo centered with even padding (ccpg-logo-transparent.dim_512x128.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T20:15:22.980Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/ccpg-logo-transparent.dim_512x128.png",
+          "frontend/src/components/landing/sections/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/ccpg-logo-transparent.dim_512x128.png",
+          "frontend/src/components/landing/sections/HeroSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/ccpg-logo-transparent.dim_512x128.png",
+    "frontend/src/components/landing/sections/HeroSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

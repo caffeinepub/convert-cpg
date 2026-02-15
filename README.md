@@ -1,2 +1,3 @@
-# convert-cpg
-Exported from Caffeine project: Replace convert.cpg wordmark image with uploaded brand logo
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
