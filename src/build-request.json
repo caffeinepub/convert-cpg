@@ -1,39 +1,40 @@
 {
   "kind": "build_request",
-  "title": "Replace convert.cpg wordmark image with uploaded brand logo",
+  "title": "Replace only the top-of-page hero logo with uploaded CCPG logo",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+      "text": "Add the user-uploaded logo image (\"CCPG logo.png\") as a static asset under frontend/public/assets/generated, and update the top-of-page (hero) logo in frontend/src/components/landing/sections/HeroSection.tsx to use this new asset instead of the current /assets/generated/ccpg-logo-transparent.dim_512x128.png.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-3"
         ],
         "quotes": [
-          "Please change the conver.cpg image to my brand logo image that I attached."
+          "The main log at the very top of the page only"
         ]
       },
       "acceptanceCriteria": [
-        "A new logo image file exists under frontend/public/assets/generated with a stable filename.",
-        "HeroSection renders the uploaded brand logo instead of \"/assets/generated/convert-cpg-wordmark.dim_512x128.png\".",
-        "The hero logo displays correctly on light and dark backgrounds (transparent background preserved).",
-        "No backend changes are required."
+        "A new logo image derived from the uploaded \"CCPG logo.png\" exists under frontend/public/assets/generated with the filename specified in this build request.",
+        "HeroSection renders the new generated logo image at the very top of the page (the centered logo/wordmark block).",
+        "No other logos/images elsewhere in the app are changed as part of this update.",
+        "The hero logo remains responsive and visually aligned (keeps h-12 w-auto on mobile and sm:h-16 on larger screens or equivalent sizing behavior)."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under frontend/src/components/ui or any frontend immutablePaths listed in SYSTEM_CONTEXT.",
-    "Keep all changes within the existing single-page landing page; do not introduce new sections or flows."
+    "Frontend paths listed as immutable in SYSTEM_CONTEXT must not be edited.",
+    "Replace only the main top-of-page (hero) logo; do not change any other logos or images elsewhere in the app."
   ],
   "nonGoals": [
-    "Creating or modifying backend canister logic.",
-    "Changing carousel timing or other unrelated landing page content."
+    "Updating the hero background image or any carousel behavior.",
+    "Changing any marketing copy, colors/theme, or layout outside the top-of-page logo swap.",
+    "Backend changes (no Motoko changes expected)."
   ],
   "imageRequirements": {
     "required": [
-      "Transparent brand logo centered with even padding (ccpg-logo-transparent.dim_512x128.png)"
+      "Square black-and-white brand logo on a white background (ccpg-logo-top.dim_512x512.png)"
     ],
     "edits": []
   },

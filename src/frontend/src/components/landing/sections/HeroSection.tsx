@@ -22,7 +22,7 @@ export function HeroSection() {
         {/* Logo/Wordmark */}
         <div className="mb-12 flex justify-center sm:mb-16">
           <img
-            src="/assets/generated/ccpg-logo-transparent.dim_512x128.png"
+            src="/assets/generated/ccpg-logo-top.dim_512x512.png"
             alt="CCPG"
             className="h-12 w-auto sm:h-16"
           />

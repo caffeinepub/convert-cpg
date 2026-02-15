@@ -1,5 +1,5 @@
 {
-  "frontend/src/components/landing/sections/HeroSection.tsx": "Hero section component displaying the CCPG brand logo, headline, credentials grid, and CTA button; updated to use the transparent brand logo instead of the convert.cpg wordmark.",
+  "frontend/src/components/landing/sections/HeroSection.tsx": "Hero section component displaying the CCPG brand logo at the top of the page, headline, credentials grid, and CTA button; updated to use the new square CCPG logo (ccpg-logo-top.dim_512x512.png) with responsive sizing.",
   "frontend/src/components/landing/sections/OfferSection.tsx": "Offer section component displaying service details and CTA; updated to use \"we specialize\" instead of \"I specialize\".",
   "frontend/src/components/landing/sections/CaseStudiesSection.tsx": "Case studies section displaying three client success stories with metrics and changes; updated label from \"What I Changed:\" to \"What We Changed:\".",
   "frontend/src/components/landing/sections/CalendlySection.tsx": "Calendly booking section with consultation CTA; updated to use \"we can help\" instead of \"I can help\".",

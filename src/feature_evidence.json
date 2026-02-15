@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-the-user-uploaded-brand-logo-from-ccpg-logo-transparent-bg-png-as-a-static-image-asset-under-frontend-public-assets-generated-and-use-it-as-the-primary-hero-logo-in-place-of-the-current-convert-cpg-wordmark-image",
-      "featureTitle": "Add the user-uploaded brand logo (from \"CCPG logo Transparent BG.png\") as a static image asset under frontend/public/assets/generated and use it as the primary hero logo in place of the current convert.cpg wordmark image.",
+      "featureId": "feature-add-the-user-uploaded-logo-image-ccpg-logo-png-as-a-static-asset-under-frontend-public-assets-generated-and-update-the-top-of-page-hero-logo-in-frontend-src-components-landing-sections-herosection-tsx-to-use-this-new-asset-instead-of-the-current-assets-generated-ccpg-logo-transparent-dim-512x128-png",
+      "featureTitle": "Add the user-uploaded logo image (\"CCPG logo.png\") as a static asset under frontend/public/assets/generated, and update the top-of-page (hero) logo in frontend/src/components/landing/sections/HeroSection.tsx to use this new asset instead of the current /assets/generated/ccpg-logo-transparent.dim_512x128.png.",
       "files": [
         "frontend/src/components/landing/sections/HeroSection.tsx"
       ],

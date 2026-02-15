@@ -1,36 +1,39 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-15T20:15:22.978Z",
-  "summary": "HeroSection now references the requested new logo filename, but the diff does not add the actual image asset under frontend/public/assets/generated. Additional unrequested metadata/tracking changes were made in project_state.json and frontend-file-summaries.txt.",
+  "generatedAt": "2026-02-15T20:19:22.153Z",
+  "summary": "HeroSection was updated to reference the new hero logo path and retain responsive sizing, but the required static asset file was not added. Additionally, multiple unrelated marketing-copy changes and project metadata updates appear in the diff summary, which violate the constraint to only swap the hero logo.",
   "missing_requirements": [
     {
       "id": "REQ-1",
-      "requirement": "Add the user-uploaded brand logo as a static image asset under frontend/public/assets/generated with a stable filename.",
-      "reason": "No new files were added in the diff, and there is no evidence of an image being placed under frontend/public/assets/generated.",
+      "requirement": "Add the user-uploaded logo image as a static asset under frontend/public/assets/generated with the specified filename (ccpg-logo-top.dim_512x512.png).",
+      "reason": "The diff shows no added files; therefore the new image asset does not appear to have been added under frontend/public/assets/generated as required.",
       "evidence": [
-        "File diff summary: \"Added: 0\"",
-        "frontend/src/components/landing/sections/HeroSection.tsx (references /assets/generated/ccpg-logo-transparent.dim_512x128.png)"
+        "File diff summary: Added files: none",
+        "frontend/src/components/landing/sections/HeroSection.tsx (now references /assets/generated/ccpg-logo-top.dim_512x512.png, implying the asset must exist)"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Updated project tracking/state to add/track feature requests (AR-1, AR-2) and statuses.",
-      "reason": "BuildRequest only asked to replace the hero wordmark with the uploaded logo; it did not request changes to project_state.json.",
+      "description": "Marketing copy changes across other landing sections (e.g., \"I\" → \"we\" wording) beyond the hero logo swap.",
+      "reason": "BuildRequest explicitly constrains changes to replacing only the top-of-page hero logo and lists marketing copy changes as non-goals; the diff summary indicates updates to multiple other components and marketing config.",
       "evidence": [
-        "project_state.json"
+        "frontend-file-summaries.txt (OfferSection.tsx updated \"we specialize\" vs \"I specialize\")",
+        "frontend-file-summaries.txt (CaseStudiesSection.tsx label updated to \"What We Changed:\")",
+        "frontend-file-summaries.txt (CalendlySection.tsx updated to \"we can help\")",
+        "frontend-file-summaries.txt (frontend/src/config/marketing.ts tagline updated \"I Help\" → \"We Help\")"
       ]
     },
     {
-      "description": "Updated/maintained generated documentation summary file (frontend-file-summaries.txt).",
-      "reason": "BuildRequest did not request updating summary/metadata files.",
+      "description": "Project tracking/metadata changes marking new feature requests (AR-1/AR-2) in project_state.json.",
+      "reason": "BuildRequest does not request updates to project_state.json; this appears to be unrelated bookkeeping rather than the required logo swap.",
       "evidence": [
-        "frontend-file-summaries.txt"
+        "project_state.json (new_feature_requests entries AR-1 and AR-2; status pending)"
       ]
     }
   ],
-  "confidence": 0.72,
+  "confidence": 0.78,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/landing/sections/HeroSection.tsx",
